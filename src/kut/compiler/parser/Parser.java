@@ -73,7 +73,7 @@ public class Parser
 	 */
 	protected AstNode program() throws IOException, CompileErrorException
 	{
-		AstNode node = additiveExp();
+		AstNode node = additiveExpr();
 		return new AstProgram(node);
 	}
 	
@@ -82,7 +82,7 @@ public class Parser
 	 * @throws IOException
 	 * @throws CompileErrorException
 	 */
-	public AstNode additiveExp() throws IOException, CompileErrorException
+	public AstNode additiveExpr() throws IOException, CompileErrorException
 	{
 		AstNode lhs = multiplicativeExpr();
 		while(true) {
